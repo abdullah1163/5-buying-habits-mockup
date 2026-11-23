@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The 5 Buying Habits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0d1b33; --navy-2:#162a4d; --ink:#18212f; --muted:#5d6676; --line:#e6e1d6;
+  --ivory:#faf7f1; --paper:#ffffff; --gold:#b8903b; --gold-2:#d9b45f;
+  --red:#e03a2f; --blue:#2b59c3; --green:#1f9d55; --yellow:#f2c230;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--ivory);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.1;margin:0 0 .45em;color:var(--navy);letter-spacing:-.01em}
+h1{font-size:clamp(2.2rem,4.2vw,3.5rem)}
+h2{font-size:clamp(1.9rem,3.4vw,2.8rem)}
+h3{font-size:1.3rem}
+p{margin:0 0 1em}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font:600 1rem Inter,sans-serif;white-space:nowrap;transition:transform .15s,box-shadow .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--navy);color:#fff;box-shadow:0 10px 24px rgba(13,27,51,.22)}
+.btn-primary:hover{background:var(--navy-2)}
+.btn-gold{background:var(--gold);color:#fff;box-shadow:0 10px 24px rgba(184,144,59,.3)}
+.btn-gold:hover{background:#a67f30}
+.btn-line{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px rgba(13,27,51,.25)}
+.btn-line:hover{box-shadow:inset 0 0 0 1.5px var(--navy)}
+.btn-light{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)}
+
+/* brand strip from the logo colors */
+.strip{height:4px;background:linear-gradient(90deg,var(--red) 0 25%,var(--blue) 25% 50%,var(--green) 50% 75%,var(--yellow) 75%)}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy)}
+.brand img{height:40px;width:40px;object-fit:contain}
+.brand span{font-family:Fraunces,serif;font-weight:700;font-size:1.2rem;line-height:1}
+.brand small{display:block;font:500 .7rem Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.nav-links{display:flex;gap:30px;font-size:.93rem;font-weight:500;color:#3b4454}
+.nav-links a{text-decoration:none}
+.nav-links a:hover{color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:20px}
+.nav-phone{font-weight:600;text-decoration:none;font-size:.95rem;color:var(--navy)}
+.nav-right .btn{padding:12px 22px;font-size:.92rem}
+@media(max-width:960px){.nav-links,.nav-phone{display:none}}
+@media(max-width:480px){.brand small{display:none}.nav-right .btn{padding:10px 16px;font-size:.85rem}}
+
+/* hero */
+.hero{padding:80px 0 96px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-180px;top:-160px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(184,144,59,.14),transparent 65%);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.02fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero .lead{font-size:1.18rem;color:var(--muted);max-width:32em}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap;margin:30px 0 34px}
+.creds{display:flex;gap:0;border-top:1px solid var(--line);padding-top:24px}
+.creds div{flex:1;padding-right:18px}
+.creds div+div{padding-left:18px;border-left:1px solid var(--line)}
+.creds b{display:block;font-family:Fraunces,serif;font-size:1.9rem;font-weight:600;color:var(--navy);line-height:1.1}
+.creds span{font-size:.82rem;color:var(--muted)}
+@media(max-width:960px){.hero .wrap{grid-template-columns:1fr;gap:44px}.hero{padding:48px 0 64px}}
+@media(max-width:480px){.creds{flex-direction:column;gap:14px}.creds div+div{padding-left:0;border-left:0}}
+
+/* video facade */
+.video{position:relative;aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:#0b1424;box-shadow:0 40px 80px -20px rgba(13,27,51,.45);cursor:pointer}
+.video img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.video:hover img{transform:scale(1.03)}
+.video::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,27,51,.05) 40%,rgba(13,27,51,.65))}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;width:84px;height:84px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .2s}
+.video:hover .play{transform:translate(-50%,-50%) scale(1.07)}
+.play svg{margin-left:5px}
+.video .vlabel{position:absolute;left:22px;bottom:18px;right:22px;z-index:2;color:#fff;font-size:.9rem;display:flex;justify-content:space-between;gap:10px}
+.video .vlabel b{font-weight:600}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
+.hero-video{position:relative}
+.hero-video .tag{position:absolute;left:-22px;bottom:-26px;z-index:4;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 20px 40px rgba(13,27,51,.16);display:flex;gap:12px;align-items:center;font-size:.85rem;color:var(--muted);max-width:270px}
+.hero-video .tag img{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:top;flex:none}
+.hero-video .tag b{display:block;color:var(--navy);font-size:.92rem}
+@media(max-width:600px){.hero-video .tag{position:static;margin-top:16px;max-width:none;box-shadow:none;border:1px solid var(--line)}}
+
+/* trust band */
+.band{background:var(--navy);color:#b8c3d6;padding:26px 0}
+.band .wrap{display:flex;align-items:center;gap:34px;flex-wrap:wrap;justify-content:center}
+.band small{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2);font-weight:700}
+.band span{font-family:Fraunces,serif;font-size:1.05rem;color:#e8edf5;opacity:.85}
+
+section{padding:104px 0}
+.head{max-width:720px;margin-bottom:56px}
+.head.center{margin-left:auto;margin-right:auto;text-align:center}
+.head.center .eyebrow::after{content:"";width:26px;height:2px;background:var(--gold)}
+.head p{color:var(--muted);font-size:1.1rem}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.pillar{padding:36px 34px 8px 0}
+.pillar+.pillar{padding-left:34px;border-left:1px solid var(--line)}
+.pillar .n{font-family:Fraunces,serif;font-size:3rem;line-height:1;color:var(--gold);margin-bottom:18px;font-weight:400}
+.pillar p{color:var(--muted);margin:0}
+@media(max-width:860px){.pillars{grid-template-columns:1fr}.pillar,.pillar+.pillar{padding:28px 0;border-left:0;border-bottom:1px solid var(--line)}}
+
+/* case study */
+.case{background:var(--navy);color:#c3cddd;position:relative;overflow:hidden}
+.case h2{color:#fff}
+.case .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.case .eyebrow{color:var(--gold-2)}.case .eyebrow::before{background:var(--gold-2)}
+.case .meta{display:flex;gap:14px;align-items:center;margin:26px 0 32px;padding:18px 0;border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
+.case .meta .av{width:46px;height:46px;border-radius:50%;background:var(--gold);color:#fff;display:grid;place-items:center;font-family:Fraunces,serif;font-weight:700}
+.case .meta b{color:#fff;display:block}
+.case .meta span{font-size:.88rem}
+@media(max-width:960px){.case .wrap{grid-template-columns:1fr;gap:40px}}
+
+/* booking */
+.book{background:linear-gradient(180deg,var(--ivory),#f1ece1)}
+.tabs{display:inline-flex;background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px;margin:0 auto 28px;gap:4px}
+.tabs button{border:0;background:transparent;padding:11px 22px;border-radius:999px;font:600 .92rem Inter,sans-serif;color:var(--muted);cursor:pointer}
+.tabs button.on{background:var(--navy);color:#fff}
+.tabwrap{text-align:center}
+.panel{text-align:left;max-width:1000px;margin:0 auto}
+
+/* GHL style calendar widget */
+.ghl{background:#fff;border:1px solid #e4e7ec;border-radius:16px;box-shadow:0 30px 60px -20px rgba(16,24,40,.2);overflow:hidden;font-family:Inter,system-ui,sans-serif;color:#101828}
+.ghl-body{display:grid;grid-template-columns:280px 1fr}
+.ghl-info{padding:30px 28px;border-right:1px solid #eaecf0;background:#fcfcfd}
+.ghl-info .av{width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:top;margin-bottom:16px;border:3px solid #fff;box-shadow:0 0 0 1px #eaecf0}
+.ghl-info .host{font-size:.88rem;color:#667085}
+.ghl-info h4{font-size:1.25rem;line-height:1.3;margin:4px 0 18px;font-weight:700}
+.ghl-meta{display:flex;flex-direction:column;gap:12px;font-size:.9rem;color:#475467}
+.ghl-meta span{display:flex;gap:10px;align-items:flex-start}
+.ghl-meta svg{flex:none;margin-top:3px;color:#98a2b3}
+.ghl-desc{font-size:.88rem;color:#667085;margin:20px 0 0;padding-top:18px;border-top:1px solid #eaecf0}
+.ghl-main{padding:28px 30px}
+.ghl-title{font-weight:700;font-size:1.05rem;margin-bottom:18px}
+.ghl-split{display:grid;grid-template-columns:1fr 200px;gap:28px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.cal-head b{font-size:1rem}
+.cal-nav{display:flex;gap:6px}
+.cal-nav button{width:34px;height:34px;border-radius:50%;border:1px solid #eaecf0;background:#fff;cursor:pointer;color:#344054;font-size:1.1rem;line-height:1}
+.cal-nav button:disabled{opacity:.35;cursor:default}
+.dow,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center}
+.dow div{font-size:.72rem;font-weight:600;color:#98a2b3;padding:6px 0;text-transform:uppercase;letter-spacing:.04em}
+.days button,.days span{height:42px;border:0;border-radius:50%;background:transparent;font:500 .92rem Inter,sans-serif;color:#c3c8d1;width:42px;margin:0 auto;padding:0}
+.days button.avail{color:#155eef;background:#eff4ff;font-weight:700;cursor:pointer}
+.days button.avail:hover{background:#d1e0ff}
+.days button.sel{background:#155eef;color:#fff}
+.days button.today{box-shadow:inset 0 0 0 1px #d0d5dd}
+.tz{font-size:.82rem;color:#667085;margin-top:16px;display:flex;gap:6px;align-items:center}
+.slot-col .day{font-size:.9rem;font-weight:600;margin-bottom:12px;color:#344054;min-height:22px}
+.slots{display:flex;flex-direction:column;gap:8px;max-height:330px;overflow:auto;padding-right:4px}
+.slots .hint{font-size:.88rem;color:#98a2b3;line-height:1.5;padding:14px;border:1px dashed #d0d5dd;border-radius:10px;text-align:center}
+.slot{border:1px solid #b2ccff;color:#155eef;background:#fff;border-radius:8px;padding:11px;font:600 .92rem Inter,sans-serif;cursor:pointer}
+.slot:hover{border-color:#155eef;background:#f5f8ff}
+.slot.sel{background:#155eef;color:#fff;border-color:#155eef}
+.ghl-foot{display:flex;justify-content:space-between;align-items:center;padding:14px 30px;border-top:1px solid #eaecf0;background:#fcfcfd;gap:12px}
+.ghl-foot small{color:#98a2b3;font-size:.75rem}
+.ghl-btn{background:#155eef;color:#fff;border:0;border-radius:8px;padding:11px 22px;font:600 .92rem Inter,sans-serif;cursor:pointer}
+.ghl-btn:disabled{background:#b2ccff;cursor:default}
+.ghl-back{background:none;border:0;color:#475467;cursor:pointer;font:500 .92rem Inter,sans-serif;margin-right:8px}
+.picked{display:flex;gap:10px;align-items:center;background:#f5f8ff;border:1px solid #d1e0ff;border-radius:10px;padding:12px 14px;font-size:.92rem;color:#1849a9;margin-bottom:20px;font-weight:500}
+.ghl .field input{border-radius:8px}
+.hide{display:none!important}
+@media(max-width:860px){.ghl-body{grid-template-columns:1fr}.ghl-info{border-right:0;border-bottom:1px solid #eaecf0;display:grid;grid-template-columns:72px 1fr;gap:0 16px;align-items:center}.ghl-info .av{margin:0;grid-row:span 2}.ghl-info h4{margin:2px 0 0}.ghl-info .ghl-meta,.ghl-info .ghl-desc{grid-column:1/-1}.ghl-info .ghl-meta{margin-top:18px;flex-direction:row;flex-wrap:wrap;gap:10px 22px}}
+@media(max-width:640px){.ghl-split{grid-template-columns:1fr}.ghl-main{padding:22px 18px}.ghl-foot{padding:14px 18px}.days button,.days span{width:38px;height:38px}.slots{display:grid;grid-template-columns:repeat(3,1fr);max-height:none}}
+
+/* form */
+.formcard{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 30px 60px -20px rgba(16,24,40,.18);display:grid;grid-template-columns:1fr 1.3fr;overflow:hidden}
+.formside{background:var(--navy);color:#c3cddd;padding:40px 36px}
+.formside h3{color:#fff;font-size:1.7rem}
+.formside ul{list-style:none;padding:0;margin:24px 0 0;display:flex;flex-direction:column;gap:14px;font-size:.95rem}
+.formside li{display:flex;gap:12px}
+.formside li::before{content:"";flex:none;width:20px;height:20px;border-radius:50%;margin-top:2px;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat}
+.formbody{padding:36px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.83rem;font-weight:600;margin-bottom:7px;color:#344054}
+.field input,.field select{width:100%;padding:12px 14px;border:1px solid #d0d5dd;border-radius:10px;font:400 .95rem Inter,sans-serif;background:#fff;color:var(--ink)}
+.field input:focus,.field select:focus{outline:none;border-color:#155eef;box-shadow:0 0 0 4px rgba(21,94,239,.12)}
+.field input.err{border-color:#d92d20}
+.consent{display:flex;gap:10px;font-size:.78rem;color:var(--muted);line-height:1.5;margin:4px 0 20px}
+.consent input{margin-top:3px;flex:none}
+.formbody .btn{width:100%}
+.done{text-align:center;padding:40px 10px}
+.done .tick{width:60px;height:60px;border-radius:50%;background:#ecfdf3;color:#12b76a;display:grid;place-items:center;margin:0 auto 16px}
+@media(max-width:860px){.formcard{grid-template-columns:1fr}.formside{padding:30px 24px}.formbody{padding:26px 22px}}
+@media(max-width:520px){.row2{grid-template-columns:1fr;gap:0}}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:center}
+.bookimg{position:relative;max-width:400px;margin:0 auto}
+.bookimg>img{width:100%;border-radius:6px;box-shadow:0 40px 70px -20px rgba(13,27,51,.45);transform:rotate(-2deg)}
+.bookimg .who{position:absolute;right:-28px;bottom:36px;background:#fff;border-radius:16px;padding:14px 18px 14px 14px;display:flex;gap:12px;align-items:center;box-shadow:0 20px 40px rgba(13,27,51,.18)}
+.bookimg .who img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:top}
+.bookimg .who b{display:block;color:var(--navy);font-size:.95rem}
+.bookimg .who span{font-size:.8rem;color:var(--muted)}
+.mission{font-family:Fraunces,serif;font-style:italic;font-size:1.2rem;line-height:1.55;color:var(--navy);border-left:3px solid var(--gold);padding:4px 0 4px 22px;margin:26px 0}
+.lists{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:30px;padding-top:28px;border-top:1px solid var(--line)}
+.lists h4{font:700 .75rem Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 0 12px}
+.lists ul{margin:0;padding:0;list-style:none;font-size:.92rem;color:#3b4454;display:flex;flex-direction:column;gap:7px}
+@media(max-width:960px){.about .wrap{grid-template-columns:1fr;gap:56px}.bookimg .who{right:-8px}}
+@media(max-width:520px){.lists{grid-template-columns:1fr}.bookimg{max-width:300px}}
+
+/* final */
+.final .box{background:var(--navy);border-radius:28px;padding:72px 32px;text-align:center;color:#c3cddd;position:relative;overflow:hidden}
+.final .box::before{content:"";position:absolute;inset:auto 0 0 0;height:5px;background:linear-gradient(90deg,var(--red) 0 25%,var(--blue) 25% 50%,var(--green) 50% 75%,var(--yellow) 75%)}
+.final h2{color:#fff}
+.final .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+footer{padding:40px 0 48px;color:var(--muted);font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:28px}
+footer a{text-decoration:none;color:var(--navy);font-weight:600}
+.mockpill{position:fixed;left:16px;bottom:16px;z-index:50;background:rgba(13,27,51,.88);color:#fff;font-size:.72rem;padding:7px 12px;border-radius:999px;letter-spacing:.04em}
+@media(max-width:640px){.mockpill{left:50%;transform:translateX(-50%);bottom:10px;font-size:.66rem;padding:5px 10px;white-space:nowrap}.hero .ctas .btn{flex:1 1 100%}}
+</style>
+</head>
+<body>
+
+<div class="strip"></div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="https://the5buyinghabits.com/images/logo.png" alt=""><div><span>The 5 Buying Habits</span><small>Matthew Sikich</small></div></a>
+    <nav class="nav-links">
+      <a href="#program">The Program</a>
+      <a href="#results">Results</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-phone" href="tel:+16123825900">612 382 5900</a>
+      <a class="btn btn-primary" href="#book">Book a Call</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">For small &amp; medium size businesses</div>
+      <h1>What <em>99%</em> of business owners don't know about how and why their customers really buy.</h1>
+      <p class="lead">Your customers are already telling you how they want to be sold to. Matthew Sikich shows your team how to hear it, so every presentation lands the way the buyer needs it to.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="#book">Book a Free Strategy Call</a>
+        <a class="btn btn-line" href="#results">Watch a client story</a>
+      </div>
+      <div class="creds">
+        <div><b>35 yrs</b><span>training owners &amp; sales teams</span></div>
+        <div><b>6,000+</b><span>hours of postgraduate study</span></div>
+        <div><b>1</b><span>client per market, exclusive</span></div>
+      </div>
+    </div>
+    <div class="hero-video">
+      <div class="video" data-id="Gvqy_bXgiJY">
+        <img src="https://i.ytimg.com/vi/Gvqy_bXgiJY/maxresdefault.jpg" alt="Matthew Sikich presenting The 5 Buying Habits">
+        <div class="play"><svg width="28" height="28" viewBox="0 0 24 24" fill="#0d1b33"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg></div>
+        <div class="vlabel"><b>Watch the introduction</b><span>3 min</span></div>
+      </div>
+      <div class="tag"><img src="https://the5buyinghabits.com/images/matthew-sikich.jpg" alt=""><div><b>Matthew G. Sikich II</b>Consultant, trainer &amp; author</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <small>Community work includes</small>
+    <span>Habitat for Humanity</span><span>Make-A-Wish</span><span>Salvation Army</span><span>March of Dimes</span><span>Boys &amp; Girls Clubs</span>
+  </div>
+</div>
+
+<section id="program">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">The Program</div>
+      <h2>Training that changes how your whole team sells</h2>
+      <p>Built for companies with a meaningful ticket size, where one extra sale pays for the program.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar"><div class="n">01</div><h3>Learn the 5 buying habits</h3><p>Your team learns to recognize how each customer takes in information and decides, then matches the presentation to that person.</p></div>
+      <div class="pillar"><div class="n">02</div><h3>An exclusive in your market</h3><p>Matthew works with one company per mapped territory. Once you're in, your competitors in that area can't get the program.</p></div>
+      <div class="pillar"><div class="n">03</div><h3>A reason to choose you first</h3><p>A complimentary vacation offer for prospects who sit down with your team gives you the edge when they're comparing companies.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="case" id="results">
+  <div class="wrap">
+    <div class="video" data-id="uxmeJp0fNOA">
+      <img src="https://i.ytimg.com/vi/uxmeJp0fNOA/hqdefault.jpg" alt="Allstar Construction testimonial">
+      <div class="play"><svg width="28" height="28" viewBox="0 0 24 24" fill="#0d1b33"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg></div>
+      <div class="vlabel"><b>Allstar Construction</b><span>Client story</span></div>
+    </div>
+    <div>
+      <div class="eyebrow">Client Story</div>
+      <h2>What happened when a roofing company put it to work</h2>
+      <p>Justin Jacobs of Allstar Construction talks about what changed for his team after going through The 5 Buying Habits.</p>
+      <div class="meta"><div class="av">JJ</div><div><b>Justin Jacobs</b><span>Allstar Construction</span></div></div>
+      <a class="btn btn-gold" href="#book">See if your market is open</a>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="head center">
+      <div class="eyebrow">Get Started</div>
+      <h2>Find out if your market is still available</h2>
+      <p>Book a free strategy call with Matthew, or leave your details and we'll call you.</p>
+    </div>
+
+    <div class="tabwrap">
+      <div class="tabs" role="tablist">
+        <button class="on" data-tab="cal">Book a time</button>
+        <button data-tab="form">Request a callback</button>
+      </div>
+    </div>
+
+    <!-- GHL style calendar (demo) -->
+    <div class="panel" id="p-cal">
+      <div class="ghl">
+        <div class="ghl-body">
+          <div class="ghl-info">
+            <img class="av" src="https://the5buyinghabits.com/images/matthew-sikich.jpg" alt="Matthew Sikich">
+            <div class="host">Matthew Sikich</div>
+            <h4>5 Buying Habits Strategy Call</h4>
+            <div class="ghl-meta">
+              <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>30 mins</span>
+              <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Phone call</span>
+              <span id="metaPick" class="hide"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span id="metaPickTxt"></span></span>
+            </div>
+            <p class="ghl-desc">We'll look at where your sales team is today, whether your territory is open, and if the program is the right fit.</p>
+          </div>
+          <div class="ghl-main">
+            <div id="s1">
+              <div class="ghl-title">Select a date &amp; time</div>
+              <div class="ghl-split">
+                <div>
+                  <div class="cal-head"><b id="mLbl"></b><div class="cal-nav"><button id="prev" aria-label="Previous month">‹</button><button id="next" aria-label="Next month">›</button></div></div>
+                  <div class="dow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div>
+                  <div class="days" id="days"></div>
+                  <div class="tz"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Central Time (US &amp; Canada)</div>
+                </div>
+                <div class="slot-col">
+                  <div class="day" id="sDay"></div>
+                  <div class="slots" id="slots"></div>
+                </div>
+              </div>
+            </div>
+            <div id="s2" class="hide">
+              <div class="ghl-title">Enter your details</div>
+              <div class="picked"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span id="pickTxt"></span></div>
+              <div class="row2">
+                <div class="field"><label>First name *</label><input id="g1"></div>
+                <div class="field"><label>Last name *</label><input id="g2"></div>
+              </div>
+              <div class="row2">
+                <div class="field"><label>Email *</label><input id="g3" type="email"></div>
+                <div class="field"><label>Phone *</label><input id="g4" type="tel"></div>
+              </div>
+              <div class="field"><label>Company name</label><input></div>
+            </div>
+            <div id="s3" class="hide done">
+              <div class="tick"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg></div>
+              <div class="ghl-title" style="margin-bottom:6px">Your meeting has been scheduled</div>
+              <p style="color:#667085;margin:0" id="doneTxt"></p>
+            </div>
+          </div>
+        </div>
+        <div class="ghl-foot">
+          <small>Powered by HighLevel</small>
+          <div><button class="ghl-back hide" id="back">Back</button><button class="ghl-btn" id="go" disabled>Continue</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- callback form (demo) -->
+    <div class="panel hide" id="p-form">
+      <div class="formcard">
+        <div class="formside">
+          <h3>Prefer we call you?</h3>
+          <p>Leave your details and Matthew's team will reach out to talk about your company and your market.</p>
+          <ul>
+            <li>See if your territory is still open</li>
+            <li>Get a feel for how the program works</li>
+            <li>No obligation</li>
+          </ul>
+        </div>
+        <div class="formbody">
+          <form id="lead" novalidate>
+            <div class="row2">
+              <div class="field"><label for="f1">First name</label><input id="f1" required></div>
+              <div class="field"><label for="f2">Last name</label><input id="f2" required></div>
+            </div>
+            <div class="field"><label for="f3">Company</label><input id="f3" required></div>
+            <div class="row2">
+              <div class="field"><label for="f4">Email</label><input id="f4" type="email" required></div>
+              <div class="field"><label for="f5">Phone</label><input id="f5" type="tel" required></div>
+            </div>
+            <div class="row2">
+              <div class="field"><label for="f6">Industry</label><select id="f6"><option>Roofing</option><option>Home improvement</option><option>Solar</option><option>HVAC</option><option>Real estate</option><option>Other</option></select></div>
+              <div class="field"><label for="f7">City or service area</label><input id="f7"></div>
+            </div>
+            <label class="consent"><input type="checkbox">I agree to be contacted by phone, text and email about my inquiry. Message and data rates may apply. Reply STOP to opt out.</label>
+            <button class="btn btn-primary" type="submit">Request a Callback</button>
+          </form>
+          <div class="done hide" id="leadDone">
+            <div class="tick"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg></div>
+            <h3>Thank you</h3>
+            <p style="color:var(--muted)">We've received your details and will be in touch.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="bookimg">
+      <img src="https://the5buyinghabits.com/images/5-buying-book-final.png" alt="The 5 Buying Habits by Matthew G. Sikich II">
+      <div class="who"><img src="https://the5buyinghabits.com/images/matthew-sikich.jpg" alt=""><div><b>Matthew G. Sikich II</b><span>Author &amp; consultant</span></div></div>
+    </div>
+    <div>
+      <div class="eyebrow">About Matthew</div>
+      <h2>Three decades helping people and businesses communicate</h2>
+      <p style="color:var(--muted)">Matthew Sikich is a Personal &amp; Family Dynamics Consultant, Business Consultant and Author. He holds a Major in Theology from St. John's University and has completed over 6,000 hours of postgraduate education and research.</p>
+      <div class="mission">"I am dedicated to providing the most positive and creative choices and loving solutions for individuals, couples, families, and businesses."</div>
+      <div class="lists">
+        <div>
+          <h4>Certifications</h4>
+          <ul>
+            <li>Neurolinguistic Practitioner, Anthony Robbins Research Institute</li>
+            <li>Super Learning &amp; Holographic Sound</li>
+            <li>Athletic Coaching</li>
+            <li>Mentoring, The World Wide Group</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Courses created</h4>
+          <ul>
+            <li>MASTERY of Selling</li>
+            <li>MASTERY of Management</li>
+            <li>MASTERY of Barter and Trade</li>
+            <li>The "WOW" Experience</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final" style="padding-top:0">
+  <div class="wrap">
+    <div class="box">
+      <div class="eyebrow" style="color:var(--gold-2)">One company per market</div>
+      <h2>Is your market still open?</h2>
+      <p style="max-width:520px;margin:0 auto">Once a company in your area joins, the program is closed to its competitors there.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="#book">Book a Strategy Call</a>
+        <a class="btn btn-light" href="tel:+16123825900">Call 612 382 5900</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Matthew Sikich &amp; The5BuyingHabits.com</span>
+    <span>2200 W 66th St, #234, Richfield, MN 55423 · <a href="tel:+16123825900">612 382 5900</a></span>
+  </div>
+</footer>
+
+<div class="mockpill">Mockup · form and calendar are demos</div>
+
+<script>
+var $=function(id){return document.getElementById(id)};
+$('yr').textContent=new Date().getFullYear();
+
+// video facades: load YouTube only on click
+document.querySelectorAll('.video[data-id]').forEach(function(v){
+  v.addEventListener('click',function(){
+    if(v.querySelector('iframe')) return;
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube.com/embed/'+v.dataset.id+'?autoplay=1&rel=0';
+    f.allow='autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen=true;
+    v.appendChild(f);
+  });
+});
+
+// tabs
+document.querySelectorAll('.tabs button').forEach(function(b){
+  b.onclick=function(){
+    document.querySelectorAll('.tabs button').forEach(function(x){x.classList.toggle('on',x===b)});
+    $('p-cal').classList.toggle('hide',b.dataset.tab!=='cal');
+    $('p-form').classList.toggle('hide',b.dataset.tab!=='form');
+  };
+});
+
+// callback form (demo)
+$('lead').addEventListener('submit',function(e){
+  e.preventDefault(); var ok=true;
+  ['f1','f2','f3','f4','f5'].forEach(function(id){var el=$(id),bad=!el.value.trim();el.classList.toggle('err',bad);if(bad)ok=false});
+  if(!ok) return;
+  this.classList.add('hide'); $('leadDone').classList.remove('hide');
+});
+
+// GHL style calendar (demo)
+(function(){
+  var today=new Date(); today.setHours(0,0,0,0);
+  var view=new Date(today.getFullYear(),today.getMonth(),1);
+  var first=new Date(view), last=new Date(today.getFullYear(),today.getMonth()+2,1);
+  var sel=null,time=null,step=1;
+  var M=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var D=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function avail(d){
+    var w=d.getDay(),m=d.getMonth(),n=d.getDate();
+    if(w===0||w===6||d<=today) return false;
+    if(m===10&&(n===26||n===27)) return false;
+    if(m===11&&n>=24) return false; if(m===0&&n===1) return false;
+    return n%9!==4;
+  }
+  function slots(d){return ['9:00 AM','9:30 AM','10:00 AM','11:00 AM','11:30 AM','1:00 PM','1:30 PM','2:30 PM','3:00 PM','4:00 PM'].filter(function(_,i){return (i*3+d.getDate())%4!==0})}
+  function long(d){return D[d.getDay()]+', '+M[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear()}
+  function firstAvail(){for(var d=new Date(today);d<last;d.setDate(d.getDate()+1)){if(avail(d))return new Date(d)}}
+  function cal(){
+    $('mLbl').textContent=M[view.getMonth()]+' '+view.getFullYear();
+    $('prev').disabled=view<=first; $('next').disabled=view>=last;
+    var g=$('days'); g.innerHTML='';
+    for(var i=0;i<view.getDay();i++) g.appendChild(document.createElement('span'));
+    var n=new Date(view.getFullYear(),view.getMonth()+1,0).getDate();
+    for(var d=1;d<=n;d++){
+      var dt=new Date(view.getFullYear(),view.getMonth(),d),b=document.createElement('button');
+      b.textContent=d;
+      if(+dt===+today) b.classList.add('today');
+      if(avail(dt)){b.classList.add('avail'); if(sel&&+sel===+dt) b.classList.add('sel');
+        b.onclick=(function(x){return function(){sel=x;time=null;cal();list();sync()}})(dt);}
+      else b.disabled=true;
+      g.appendChild(b);
+    }
+  }
+  function list(){
+    var s=$('slots'); s.innerHTML='';
+    $('sDay').textContent=sel?D[sel.getDay()]+', '+M[sel.getMonth()].slice(0,3)+' '+sel.getDate():'';
+    if(!sel){s.innerHTML='<div class="hint">Select a date to see available times</div>';return}
+    slots(sel).forEach(function(t){var b=document.createElement('button');b.className='slot'+(t===time?' sel':'');b.textContent=t;b.onclick=function(){time=t;list();sync()};s.appendChild(b)});
+  }
+  function sync(){
+    var txt=sel&&time?long(sel)+' · '+time+' (Central)':'';
+    $('metaPick').classList.toggle('hide',!txt); $('metaPickTxt').textContent=txt; $('pickTxt').textContent=txt;
+    ['s1','s2','s3'].forEach(function(id,i){$(id).classList.toggle('hide',step!==i+1)});
+    $('back').classList.toggle('hide',step!==2); $('go').classList.toggle('hide',step===3);
+    $('go').textContent=step===2?'Schedule Meeting':'Continue';
+    $('go').disabled=step===1&&!txt;
+  }
+  $('prev').onclick=function(){view=new Date(view.getFullYear(),view.getMonth()-1,1);cal()};
+  $('next').onclick=function(){view=new Date(view.getFullYear(),view.getMonth()+1,1);cal()};
+  $('back').onclick=function(){step=1;sync()};
+  $('go').onclick=function(){
+    if(step===1){step=2;sync();return}
+    var ok=true;['g1','g2','g3','g4'].forEach(function(id){var el=$(id),bad=!el.value.trim();el.style.borderColor=bad?'#d92d20':'';if(bad)ok=false});
+    if(!ok) return;
+    $('doneTxt').textContent=long(sel)+' at '+time+' Central Time. A confirmation is on its way to '+$('g3').value+'.';
+    step=3;sync();
+  };
+  sel=firstAvail(); if(sel&&sel.getMonth()!==view.getMonth()) view=new Date(sel.getFullYear(),sel.getMonth(),1);
+  cal();list();sync();
+})();
+</script>
+</body>
+</html>
